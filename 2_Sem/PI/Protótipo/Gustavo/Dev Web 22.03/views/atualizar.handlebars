@@ -1,0 +1,49 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SISTEMA WEB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/">Cadastrar</a>
+                    <a class="nav-link" href="/consultar">Consultar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-3 mb-3">
+        <h5 class="mb-4">Cadastrar - Agendamento de Ponteciais Clientes</h5>
+        <h6>Sistema utilizado para agendamento de serviços</h6>
+    </div>
+        
+    <form>
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="nome" aria-describedby="nome">
+        </div>
+        <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone:</label>
+            <input type="telefone" class="form-control" id="telefone">
+        </div>
+        <div class="mb-3">
+            <label for="origem" class="form-label">Origem:</label>
+            <select class="form-select" aria-label="origem">
+                <option selected>Selecione uma opção abaixo</option>
+                <option value="1">Celular</option>
+                <option value="2">E-mail</option>
+                <option value="3">Rede Social</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="data_contato" class="form-label">Data de contato:</label>
+            <input type="date" class="form-control" id="data_contato">
+        </div>
+        <div class="mb-3">
+            <label for="observacao" class="form-label">Observação:</label>
+            <textarea class="form-control" id="observacao" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Atualizar</button>
+    </form>
+</div>

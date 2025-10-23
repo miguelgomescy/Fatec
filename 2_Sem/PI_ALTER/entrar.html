@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica VitaMed | Log-In</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="img/VitaMed.png">
+    <script src="java.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+    
+    <div class="container">
+        <div class="logo">
+            <img src="img/VitaMed.svg" alt="">
+            <a href="#">Bem vindo de volta!</a>
+    
+        </div>
+        <h1>Acesse sua conta! 😉</h1>
+        <div class="social-login">
+            
+
+            
+        </div>
+
+        <div class="divider">
+            <div class="line"></div>
+            <p></p>
+            <div class="line"></div>
+        </div>
+
+        <form>
+            <label for="email">Email:</label>
+            <div class="costume-input">
+                <input type="email" name="email" 
+                placeholder="Insira seu Email" title="Insira seu email"
+                autocomplete="off">
+                <i class='bx bx-at'></i>
+            </div>
+
+
+            <label for="password">Senha:</label>
+            <div class="costume-input">
+                <input type="password" name="Senha" id="senha"
+                placeholder="Insira sua Senha" title="Insira sua Senha">
+
+            <i class="bi bi-eye-fill" id="eye" onclick="mostrarSenha(this, 'senha')"></i>
+            
+            </div>
+
+
+            
+            <button type="button" class="login" id="loginButton"> Login</button>
+            <div class="links">
+                <a href="novasenha.html">Refaça sua Senha</a>
+                <a href="criar.html">Não tem uma conta?</a>
+
+                <a href="clientes.html"> entre aqui</a>
+            </div>
+
+            
+        </form>
+       
+    </div>
+
+    <script>
+        
+        document.getElementById("loginButton").addEventListener("click", function() {
+    var email = document.getElementsByName("email")[0].value;
+    var senha = document.getElementsByName("Senha")[0].value;
+
+    // Verificar se o email e senha são os esperados
+    if (email === "meu.email@gmail.com" && senha === "minhasenha") {
+        window.location.href = "principal.html"; // Redirecionar para outra página
+    } else {
+        alert("Email ou senha incorretos. Tente novamente."); // Caso contrário, exiba uma mensagem de erro
+    }
+});
+
+    </script>
+
+
+</body>
+</html>
+<!--Desenvolvido por Miguel Gomes-->

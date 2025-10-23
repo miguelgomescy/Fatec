@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.container{
+    display: flex;
+    gap: 10px 30px;
+    background-color: purple;
+   
+   /* 
+     flex-flow: wrap column; */
+     justify-content:  center;
+     align-items: center;
+     flex-wrap: wrap;
+    
+  
+}
+
+.item{
+    display: flex;
+    width: 200px;
+    height: 2500px;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 70px;
+    flex-wrap: wrap;
+    flex-direction: row;
+   
+}
+
+
+.item{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.carro{
+    width: 50px;
+    height: 50px;
+    background-color: aquamarine;
+    
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica VitaMed | Log-In</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="assets/img/VitaMed.png">
+    <script src="assets/JS/script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+    <div class="logo">
+        <img src="assets/img/VitaMed.png" alt="">
+        <a href="#">Bem vindo de volta!</a>
+
+    </div>
+    <div class="container">
+        <h1>Acesse sua conta! 😉</h1>
+        <div class="social-login">
+            <button class="google">
+                <i class='bx bxl-google'></i>
+                Usar o Google
+            </button>
+
+            <button class="google">
+                <i class='bx bxl-apple'></i>
+                Usar a Apple
+            </button>
+        </div>
+
+        <div class="divider">
+            <div class="line"></div>
+            <p>Ou</p>
+            <div class="line"></div>
+        </div>
+
+        <form>
+            <label for="email">Email:</label>
+            <div class="costume-input">
+                <input type="email" name="email" 
+                placeholder="Insira seu Email" title="Insira seu email"
+                autocomplete="off">
+                <i class='bx bx-at'></i>
+            </div>
+
+
+            <label for="password">Senha:</label>
+            <div class="costume-input">
+                <input type="password" name="Senha" id="senha"
+                placeholder="Insira sua Senha" title="Insira sua Senha" >
+
+            <i class="bi bi-eye-fill" id="eye" onclick="mostrarSenha(this, 'senha')"></i>
+            
+            </div>
+
+
+
+            <button class="login">Login</button>
+            <div class="links">
+                <a href="index3.html">Refaça sua Senha</a>
+                <a href="index2.html">Não tem uma conta?</a>
+            </div>
+
+            
+        </form>
+       
+    </div>
+
+    
+
+</body>
+</html>
+<!--Desenvolvido por Miguel Gomes-->

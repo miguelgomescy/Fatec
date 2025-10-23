@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITAMED | ALTERAR</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    
+    <div class="container">
+        <span class="Crie"> <h1>Altere suas informações! 😉</h1></span>
+        <div class="social-login">
+           
+
+        </div>
+
+        <div class="divider">
+            <div class="line"></div>
+            <p></p>
+            <div class="line"></div>
+        </div>
+
+        <form>
+
+            <label for="email">Nome completo:</label>
+            <div class="costume-input">
+                <input type="text" name="nome" 
+                placeholder="Insira seu novo Nome completo" title="Insira seu email"
+                autocomplete="off">
+                <i class='bx bx-rename' ></i>
+            </div>
+
+            <label for="email">Email:</label>
+            <div class="costume-input">
+                <input type="email" name="email" 
+                placeholder="Insira seu novo Email" title="Insira seu email"
+                autocomplete="off">
+                <i class='bx bx-at'></i>
+            </div>
+
+            
+            <label for="number">Telefone:</label>
+            <div class="costume-input">
+                <input type="" name="phone" 
+                placeholder="Insira seu novo telefone: (xx) xxxx-xxxx" title="Insira seu telefone"
+                autocomplete="off">
+                <i class='bx bx-phone'></i>
+            </div>
+
+            <label for="password">Nova Senha:</label>
+            <div class="costume-input">
+                <input type="password" name="Senha" id="senha"
+                placeholder="Insira sua nova Senha" title="Insira sua Senha" >
+               
+                <i class="bi bi-eye-fill" id="eye" onclick="mostrarSenha(this, 'senha')"></i>
+            </div>
+
+            
+            <label for="password">Confirmar Nova Senha:</label>
+            <div class="costume-input">
+                <input type="password" name="ConfirmarSenha" id="ConfirmarSenha"
+                placeholder="Confirme sua Senha" title="Insira sua Senha" >
+
+                <i class="bi bi-eye-fill" id="eyeConfirmar" onclick="mostrarSenha(this, 'ConfirmarSenha')"></i>
+            </div>
+
+
+
+
+            <button class="login">ALTERAR DADOS</button>
+            <div class="links">
+                <span class="acesse"><a href="perfil.html">Acesse seu perfil</a></span>
+            </div>
+
+            
+        </form>
+       
+    </div>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Forms Aula 1</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="icon" href="data:image/png;base64,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">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="infos">
+            <div class="pin">
+                <i class="bi bi-geo-alt-fill"></i>
+                <h2>Nosso Endereço</h2>
+                <p>Aguia de Haia 1330, São Paulo. </p>
+            </div>
+            <div class="pin">
+                <i class="bi bi-telephone-fill"></i>
+                <h2>Telefone</h2>
+                <p>(11) 1234-56789</p>
+            </div>
+            <div class="pin">
+                <i class="bi bi-envelope-fill"></i>
+                <h2>Email</h2>
+                <p>contato@fateczl.com</p>
+            </div>
+        </div>
+        <div class="forms">
+            <h1>Nos envie sua opinião!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, vero?</p>
+            <div class="inputs">
+                <input type="text" placeholder="Insira seu nome">
+                <input type="email" placeholder="Insira seu email ">
+                <input type="text" placeholder="Insira seu número. (XX) 1234-5678">
+                <input type="text" placeholder="Escreva sua mensagem." class="mensagem">
+                <button>Enviar mensagem.</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>

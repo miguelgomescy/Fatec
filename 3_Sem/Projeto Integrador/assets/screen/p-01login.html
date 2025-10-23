@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em sua conta! | PetClinic</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/style01.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="../img/PatClinic.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+     
+    <div class="container">
+        <div class="logo">
+            <a href="../../index.html"><img src="../img/PatClinic.png" alt=""></a>
+<!--            Bem vindo de volta!  -->
+        </div>
+        <h1>Acesse sua conta! 😉</h1>
+        <div class="social-login">
+            
+
+            
+        </div>
+
+        <div class="divider">
+            <div class="line"></div>
+            <p></p>
+            <div class="line"></div>
+        </div>
+
+        <form>
+            <label for="email">Email:</label>
+            <div class="costume-input">
+                <input type="email" name="email" 
+                placeholder="Insira seu Email" title="Insira seu email"
+                autocomplete="off">
+                <i class='bx bx-at'></i>
+            </div>
+
+
+            <label for="password">Senha:</label>
+            <div class="costume-input">
+                <input type="password" name="Senha" id="senha"
+                placeholder="Insira sua Senha" title="Insira sua Senha">
+
+            <i class="bi bi-eye-fill" id="eye" onclick="mostrarSenha(this, 'senha')"></i>
+            
+            </div>
+
+
+            
+            <button type="button" class="login" id="loginButton"> Login</button>
+            <div class="links">
+                <a href="./p-002recuperar.html">Refaça sua Senha</a>
+                <a href="./p-00cadastrar.html">Não tem uma conta?</a>
+            </div>
+
+            
+        </form>
+       
+    </div>
+
+    
+
+    <script src="../js/login.js" defer></script>
+</body>
+</html>
