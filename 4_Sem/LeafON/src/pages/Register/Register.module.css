@@ -1,0 +1,227 @@
+.register {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background: linear-gradient(135deg, var(--color-bg) 0%, #edf3ec 100%);
+}
+
+.visualSide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  overflow: hidden;
+  background: var(--color-surface-muted);
+}
+
+.logo {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 2;
+}
+
+.logo img {
+  display: block;
+  width: 72px;
+  height: auto;
+  cursor: pointer;
+}
+
+.visualSide::after {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 85%;
+  height: 130%;
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 100%
+  );
+  border-bottom-left-radius: 280px;
+  border-top-left-radius: 280px;
+}
+
+.visualContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mascot {
+  width: 320px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.formSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-darker) 0%,
+    var(--color-primary) 100%
+  );
+}
+
+.formCard {
+  width: 100%;
+  max-width: 460px;
+  color: var(--color-text-inverse);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: rgba(247, 250, 247, 0.8);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-inverse);
+}
+
+.field input {
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-md);
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--color-text);
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.field input::placeholder {
+  color: #9aa3af;
+}
+
+.field input:focus {
+  border-color: #86efac;
+  box-shadow: 0 0 0 4px rgba(134, 239, 172, 0.18);
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+  font-size: 0.88rem;
+  color: rgba(247, 250, 247, 0.9);
+}
+
+.checkboxRow input {
+  width: 16px;
+  height: 16px;
+  accent-color: #86efac;
+}
+
+.registerButton {
+  margin-top: 6px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text-inverse);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.registerButton:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+.registerButton:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.3);
+  outline-offset: 2px;
+}
+
+.loginText {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: rgba(247, 250, 247, 0.75);
+}
+
+.loginText a {
+  color: #bbf7d0;
+  font-weight: 600;
+}
+
+.loginText a:hover {
+  color: #ffffff;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+  .register {
+    grid-template-columns: 1fr;
+  }
+
+  .visualSide {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 80px;
+    min-height: 280px;
+  }
+
+  .logo {
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .visualSide::after {
+    width: 100%;
+    height: 100%;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+    clip-path: ellipse(75% 100% at 50% 0%);
+  }
+
+  .visualContent {
+    margin-top: 40px;
+  }
+
+  .mascot {
+    width: 220px;
+  }
+
+  .formSide {
+    padding: 32px 20px 40px;
+  }
+}

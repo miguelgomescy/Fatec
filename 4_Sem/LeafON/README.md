@@ -1,73 +1,243 @@
-# React + TypeScript + Vite
+# 🌿 LeafON — Sistema Inteligente de Monitoramento de Plantas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **LeafON** é um sistema inteligente de monitoramento e irrigação automatizada de plantas, desenvolvido para ambientes urbanos.
+O projeto integra **IoT, aplicações web/mobile/desktop e backend**, permitindo que usuários acompanhem a saúde de suas plantas em tempo real e automatizem cuidados essenciais.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Visão Geral
 
-## React Compiler
+O LeafON é composto por:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 🌱 Dispositivo IoT (sensores + atuadores)
+* 🌐 Aplicação Web (React + Vite)
+* 📱 Aplicação Mobile
+* 🖥 Aplicação Desktop
+* ⚙️ Backend (Spring Boot + Kotlin)
+* 📡 Comunicação via MQTT
 
-## Expanding the ESLint configuration
+O sistema coleta dados ambientais e executa ações automáticas, como irrigação baseada em regras definidas pelo usuário.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🎯 Problema
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Muitas pessoas têm dificuldade em manter plantas saudáveis devido a:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Falta de tempo
+* Falta de conhecimento sobre cuidados
+* Rega irregular
+* Ausência de monitoramento das condições da planta
+
+---
+
+## 💡 Solução
+
+O LeafON resolve esses problemas através de:
+
+* Monitoramento em tempo real
+* Irrigação automática
+* Alertas inteligentes
+* Histórico de dados para tomada de decisão
+
+---
+
+## 🧩 Funcionalidades
+
+### 👤 Usuário
+
+* Cadastro e login
+* Gerenciamento de perfil
+
+### 🌿 Planta e Vaso
+
+* Cadastro de planta
+* Associação com vaso inteligente
+* Visualização do status da planta
+
+### 📊 Monitoramento
+
+* Umidade do solo
+* Temperatura
+* Luminosidade
+* Histórico de leituras
+
+### 💧 Irrigação
+
+* Irrigação manual
+* Irrigação automática baseada em regras
+
+### ⚙️ Regras de Automação
+
+Exemplo:
+
+> "Se a umidade estiver abaixo de 40%, irrigar por 10 segundos"
+
+### 🔔 Notificações
+
+* Alertas de baixa umidade
+* Eventos de irrigação
+* Avisos do sistema
+
+---
+
+## 🏗 Arquitetura do Sistema
+
+```
+Dispositivo IoT → MQTT → Backend → API REST → Frontend (Web/Mobile/Desktop)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Tecnologias Utilizadas
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+#### Frontend (Web)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* React + Vite
+* TypeScript
+* React Router
+
+#### Backend
+
+* Spring Boot (Kotlin)
+* Autenticação JWT
+* API REST
+* Integração com MQTT
+
+#### Banco de Dados
+
+* PostgreSQL
+
+#### IoT
+
+* ESP32 / Arduino
+* Sensores:
+
+  * Umidade do solo
+  * Temperatura
+  * Luminosidade
+* Atuador:
+
+  * Bomba de água
+
+---
+
+## 📁 Estrutura do Projeto (Web)
+
 ```
+src/
+ ├── assets/
+ ├── components/
+ ├── pages/
+ │   ├── Login.tsx
+ │   ├── Register.tsx
+ │   ├── Profile.tsx
+ │   └── Dashboard.tsx
+ ├── services/
+ ├── styles/
+ ├── App.tsx
+ └── main.tsx
+```
+
+---
+
+## 🖥 Telas do Sistema (Web)
+
+* Login
+* Cadastro
+* Dashboard
+* Perfil
+
+---
+
+## 🔧 Como Executar (Web)
+
+```bash
+# Clonar repositório
+git clone https://github.com/seu-usuario/leafon-web
+
+# Entrar na pasta
+cd leafon-web
+
+# Instalar dependências
+npm install
+
+# Rodar projeto
+npm run dev
+```
+
+---
+
+## 🔐 Autenticação
+
+* Baseada em JWT
+* Comunicação segura com o backend
+* Rotas protegidas (em desenvolvimento)
+
+---
+
+## 📡 Integração com API (Exemplo)
+
+```
+POST   /auth/login
+POST   /users
+GET    /me
+PUT    /me
+GET    /devices
+POST   /devices/{id}/water
+GET    /telemetry
+```
+
+---
+
+## 🧪 Escopo do MVP
+
+* 1 vaso inteligente por usuário
+* Monitoramento em tempo real
+* Irrigação manual e automática
+* Regras básicas de automação
+
+---
+
+## 📈 Melhorias Futuras
+
+* Integração com API de clima
+* Uso de Inteligência Artificial
+* Notificações push
+* Suporte a múltiplos dispositivos
+* Dashboard avançado com analytics
+
+---
+
+## 🎨 Princípios de Design
+
+* Interface minimalista
+* Identidade visual eco-tech
+* Bordas arredondadas (12px)
+* Sombras suaves
+* Alta legibilidade
+* Foco em usabilidade
+
+---
+
+## 👨‍💻 Equipe
+
+**Desenvolvedores:**
+
+* Miguel Gomes
+* Rafael Santos
+
+**Orientadores:**
+
+* Professor Junior
+* Professor Antonio
+
+---
+
+## 🎓 Contexto Acadêmico
+
+Este projeto foi desenvolvido como parte do **Projeto Integrador (PI)** do curso de Desenvolvimento de Software Multiplataforma (DSM) da Fatec.
+
+---
+
+## 📄 Licença
+
+Este projeto possui fins acadêmicos e educacionais.
