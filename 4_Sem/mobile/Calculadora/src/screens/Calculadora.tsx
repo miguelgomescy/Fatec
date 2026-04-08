@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { styles } from '../assets/MainStyles';
+import { styles } from '../styles/MainStyles';
+import Footer from '../components/Footer';
 
 export default function Calculadora() {
   const [display, setDisplay] = useState('0');
@@ -113,6 +114,8 @@ export default function Calculadora() {
         {renderBotao('0', () => adicionarNumero('0'))}
         {renderBotao('=', resultadoFinal, true)}
       </View>
-    </View>
+
+      <Footer />
+      </View>
   );
 }
